@@ -75,19 +75,19 @@
      <None Include="Assets\ProCore\Prototype\Shader\DiffuseVertexColorEmission.shader" />
      <None Include="Assets\ProCore\Prototype\About\Credits.txt" />
  <Reference Include="ProBuilderCore">
- <HintPath>C:/Users/max/Desktop/Unstable Build/430ColorCube/Assets/ProCore/Prototype/Classes/ProBuilderCore.dll</HintPath>
+ <HintPath>C:/Users/max/Desktop/430ColorCube/Assets/ProCore/Prototype/Classes/ProBuilderCore.dll</HintPath>
  </Reference>
  <Reference Include="ProBuilderMeshOps">
- <HintPath>C:/Users/max/Desktop/Unstable Build/430ColorCube/Assets/ProCore/Prototype/Classes/ProBuilderMeshOps.dll</HintPath>
+ <HintPath>C:/Users/max/Desktop/430ColorCube/Assets/ProCore/Prototype/Classes/ProBuilderMeshOps.dll</HintPath>
  </Reference>
  <Reference Include="ProBuilderEditor">
- <HintPath>C:/Users/max/Desktop/Unstable Build/430ColorCube/Assets/ProCore/Prototype/Editor/ProBuilderEditor.dll</HintPath>
+ <HintPath>C:/Users/max/Desktop/430ColorCube/Assets/ProCore/Prototype/Editor/ProBuilderEditor.dll</HintPath>
  </Reference>
  <Reference Include="ProCore">
- <HintPath>C:/Users/max/Desktop/Unstable Build/430ColorCube/Assets/ProCore/Shared/Code/ProCore.dll</HintPath>
+ <HintPath>C:/Users/max/Desktop/430ColorCube/Assets/ProCore/Shared/Code/ProCore.dll</HintPath>
  </Reference>
  <Reference Include="SixBySeven">
- <HintPath>C:/Users/max/Desktop/Unstable Build/430ColorCube/Assets/ProCore/Shared/Code/SixBySeven.dll</HintPath>
+ <HintPath>C:/Users/max/Desktop/430ColorCube/Assets/ProCore/Shared/Code/SixBySeven.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>

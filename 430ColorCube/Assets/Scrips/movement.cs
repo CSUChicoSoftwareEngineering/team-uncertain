@@ -8,7 +8,7 @@ public class movement : MonoBehaviour {
 	bool charge = true;
 	int jumpSpeed = 15;
 	int playerSpeed = 10;
-	public float gravity = 20.0F;
+	public float gravity = 40.0F;
 	private Vector3 moveDirection = Vector3.zero;
 	public Camera playerCam;
 	public Camera mainCam;
@@ -29,7 +29,7 @@ public class movement : MonoBehaviour {
 			moveDirection = new Vector3(0, 0, Input.GetAxis("Vertical"));
 			moveDirection = transform.TransformDirection(moveDirection * playerSpeed);
 			if (Input.GetButton("Charge") && player.GetComponent<colorCollision>().curColor == "red" 
-			    || Input.GetButton("Charge") && player.GetComponent<colorCollision> ().secColor == "red") {
+			    || Input.GetButton("Charge") && player.GetComponent<colorCollision> ().secColor == "orange" || Input.GetButton("Charge") && player.GetComponent<colorCollision>().secColor == "purple") {
 				if(charge == true){
 					smash = true;
 					float curSpeed = playerSpeed * Input.GetAxis("Vertical");
@@ -46,18 +46,47 @@ public class movement : MonoBehaviour {
 				smash = false;
 			}
 			if(Input.GetButtonUp("Charge")){
-			StartCoroutine("Recharge");
+				StartCoroutine("Recharge");
 			}
 			if (Input.GetButtonDown("Jump")){
 				if(player.GetComponent<colorCollision>().curColor == "yellow" 
-				   || player.GetComponent<colorCollision> ().secColor == "yellow")
+				   || player.GetComponent<colorCollision> ().secColor == "orange" || player.GetComponent<colorCollision>().secColor == "green")
 					moveDirection.y = jumpSpeed*1.5f;
 				else
 					moveDirection.y = jumpSpeed;
 			}
 		}
+		if (Input.GetButton("Charge") && player.GetComponent<colorCollision> ().secColor == "purple"){
+			if(charge == true){
+				smash = true;
+				float curSpeed = playerSpeed * Input.GetAxis("Vertical");
+				Vector3 forward = transform.TransformDirection(Vector3.forward);
+				controller.SimpleMove(forward * curSpeed* 10);
+				chargeTime++;
+				if(chargeTime == 30){
+					charge = false;
+					smash = false;
+				}
+			}
+			else{
+				smash = false;
+			}
+			if(Input.GetButtonUp("Charge")){
+				StartCoroutine("Recharge");
+			}
+		}
+		if (controller.isGrounded == false) {
+			if(Input.GetButton("Charge") && player.GetComponent<colorCollision>().secColor == "orange"){
+				smash = true;
+				float curSpeed = playerSpeed * Input.GetAxis("Vertical");
+				gravity = 240f;
+			}
+
+		}
+
+
 		if (player.GetComponent<colorCollision>().curColor == "blue" && controller.isGrounded == false 
-		    || player.GetComponent<colorCollision> ().secColor == "blue" && controller.isGrounded == false){
+		    || player.GetComponent<colorCollision> ().secColor == "purple" && controller.isGrounded == false){
 			if(Input.GetButton("Jump") && moveDirection.y < 1f){
 				gravity = 30f;
 				moveDirection = new Vector3(0, 0, Input.GetAxis("Vertical"));
@@ -66,7 +95,7 @@ public class movement : MonoBehaviour {
 
 		}
 		if (player.GetComponent<colorCollision> ().curColor == "blue" 
-		    || player.GetComponent<colorCollision> ().secColor == "blue") {
+		    || player.GetComponent<colorCollision> ().secColor == "purple" || player.GetComponent<colorCollision>().secColor == "green") {
 			moveDirection.y -= gravity * Time.deltaTime;
 		}
 		else {

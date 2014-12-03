@@ -10,6 +10,7 @@ public class movingPlatform : MonoBehaviour {
 	bool OneWay;
 	float _t;
 	float MoveSpeed = .25f;
+	bool stop = false;
 
 	void Start () {
 		startPosition = transform.position;
@@ -37,20 +38,23 @@ public class movingPlatform : MonoBehaviour {
 	}
 	void Update ()  
 	{ 
-		if (OneWay) 
+		if (OneWay) //&& stop == false) 
 			_t += Time.deltaTime * MoveSpeed; 
-		else
+		else //if(!OneWay && stop == false)
 			_t -= Time.deltaTime * MoveSpeed; 
-		transform.position = Vector3.Lerp(startPosition, endPosition, _t); 
-		
+		if (stop == false){
+			transform.position = Vector3.Lerp(startPosition, endPosition, _t); 
+		}
 		_t = Mathf.Clamp(_t,0.0f,1.0f); //avoids platforms getting stuck
 		
-		if (transform.position == endPosition || transform.position == startPosition) 
-		//	StartCoroutine (moveDelay(1));
+		if (transform.position == endPosition || transform.position == startPosition){ 
+			StartCoroutine (moveDelay(2));
 			OneWay = !OneWay; 
+			stop = true;
+		}
 	}
 	IEnumerator moveDelay(float wait){
 		yield return new WaitForSeconds(wait);
-
+		stop = false;
 	}
 }

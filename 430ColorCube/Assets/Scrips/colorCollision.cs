@@ -37,13 +37,13 @@ public class colorCollision : MonoBehaviour {
 				gameObject.renderer.material = purpleMat;
 				GetComponent<MeshFilter>().mesh = purple;
 				curColor = "blue";
-				secColor = "red";
+				secColor = "purple";
 			}
 			else if(lerpedColor == Color.yellow){
 				gameObject.renderer.material = greenMat;
 				GetComponent<MeshFilter>().mesh = green;
 				curColor = "blue";
-				secColor = "yellow";
+				secColor = "green";
 			}
 			else{
 				gameObject.renderer.material.color = Color.Lerp(lerpedColor, Color.blue, Time.time);
@@ -60,14 +60,14 @@ public class colorCollision : MonoBehaviour {
 			if(lerpedColor == Color.blue){
 				gameObject.renderer.material = purpleMat;
 				GetComponent<MeshFilter>().mesh = purple;
-				curColor = "red";
-				secColor = "blue";
+				curColor = "blue"; //red
+				secColor = "purple";
 			}
 			else if(lerpedColor == Color.yellow){
 				gameObject.renderer.material = orangeMat;
 				GetComponent<MeshFilter>().mesh = orange;
 				curColor = "red";
-				secColor = "yellow";
+				secColor = "orange";
 			}
 			else{
 				gameObject.renderer.material.color = Color.Lerp(lerpedColor, Color.red, Time.time);
@@ -85,13 +85,13 @@ public class colorCollision : MonoBehaviour {
 				gameObject.renderer.material = greenMat;
 				GetComponent<MeshFilter>().mesh = green;
 				curColor = "yellow";
-				secColor = "blue";
+				secColor = "green";
 			}
 			else if(lerpedColor == Color.red){
 				gameObject.renderer.material = orangeMat;
 				GetComponent<MeshFilter>().mesh = orange;
 				curColor = "yellow";
-				secColor = "red";
+				secColor = "orange";
 			}
 			else{
 				gameObject.renderer.material.color = Color.Lerp(lerpedColor, Color.yellow, Time.time);
