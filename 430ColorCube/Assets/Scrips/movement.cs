@@ -28,7 +28,8 @@ public class movement : MonoBehaviour {
 		if (controller.isGrounded) {
 			moveDirection = new Vector3(0, 0, Input.GetAxis("Vertical"));
 			moveDirection = transform.TransformDirection(moveDirection * playerSpeed);
-			if (Input.GetButton("Charge") && player.GetComponent<colorCollision>().curColor == "red" || player.GetComponent<colorCollision> ().curColor == "red") {
+			if (Input.GetButton("Charge") && player.GetComponent<colorCollision>().curColor == "red" 
+			    || Input.GetButton("Charge") && player.GetComponent<colorCollision> ().secColor == "red") {
 				if(charge == true){
 					smash = true;
 					float curSpeed = playerSpeed * Input.GetAxis("Vertical");
@@ -48,13 +49,15 @@ public class movement : MonoBehaviour {
 			StartCoroutine("Recharge");
 			}
 			if (Input.GetButtonDown("Jump")){
-				if(player.GetComponent<colorCollision>().curColor == "yellow" || player.GetComponent<colorCollision> ().curColor == "yellow")
+				if(player.GetComponent<colorCollision>().curColor == "yellow" 
+				   || player.GetComponent<colorCollision> ().secColor == "yellow")
 					moveDirection.y = jumpSpeed*1.5f;
 				else
 					moveDirection.y = jumpSpeed;
 			}
 		}
-		if (player.GetComponent<colorCollision>().curColor == "blue" && controller.isGrounded == false || player.GetComponent<colorCollision> ().curColor == "blue"){
+		if (player.GetComponent<colorCollision>().curColor == "blue" && controller.isGrounded == false 
+		    || player.GetComponent<colorCollision> ().secColor == "blue" && controller.isGrounded == false){
 			if(Input.GetButton("Jump") && moveDirection.y < 1f){
 				gravity = 30f;
 				moveDirection = new Vector3(0, 0, Input.GetAxis("Vertical"));
@@ -62,7 +65,8 @@ public class movement : MonoBehaviour {
 			}
 
 		}
-		if (player.GetComponent<colorCollision> ().curColor == "blue" || player.GetComponent<colorCollision> ().secColor == "blue") {
+		if (player.GetComponent<colorCollision> ().curColor == "blue" 
+		    || player.GetComponent<colorCollision> ().secColor == "blue") {
 			moveDirection.y -= gravity * Time.deltaTime;
 		}
 		else {
