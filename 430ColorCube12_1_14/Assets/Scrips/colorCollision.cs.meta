@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 160a84826d7a90148b6b05570ed6d50d
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - purpleMat: {fileID: 2100000, guid: 4e0f75158f578e141aa849c72e10ff5a, type: 2}
+  - greenMat: {fileID: 2100000, guid: c4562da8b18da78418a4925a1e476c8a, type: 2}
+  - orangeMat: {fileID: 2100000, guid: 8840788d63bd6b04190d69b7848e0d7a, type: 2}
+  - purp: {fileID: 100000, guid: ff603a4bdddbec74fb6f56a2b6974440, type: 2}
+  - oran: {fileID: 100000, guid: dce330d528dc2894286b4dabea0147a8, type: 2}
+  - gren: {fileID: 100000, guid: f376dd106c81b48458fe1b5df1b94dd3, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
