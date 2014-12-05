@@ -158,11 +158,11 @@
  <Reference Include="SixBySeven">
  <HintPath>C:/Users/max/Documents/team-uncertain/430ColorCube/Assets/ProCore/Shared/Code/SixBySeven.dll</HintPath>
  </Reference>
- <Reference Include="UnityEditor.Graphs">
- <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
- </Reference>
  <Reference Include="NSubstitute">
  <HintPath>C:/Users/max/Documents/team-uncertain/430ColorCube/Assets/UnityTestTools/UnitTesting/Editor/NSubstitute/NSubstitute.dll</HintPath>
+ </Reference>
+ <Reference Include="Mono.Cecil">
+ <HintPath>C:/Users/max/Documents/team-uncertain/430ColorCube/Assets/UnityTestTools/UnitTesting/Editor/NUnit/Libs/Mono.Cecil.dll</HintPath>
  </Reference>
  <Reference Include="Mono.Cecil.Mdb">
  <HintPath>C:/Users/max/Documents/team-uncertain/430ColorCube/Assets/UnityTestTools/UnitTesting/Editor/NUnit/Libs/Mono.Cecil.Mdb.dll</HintPath>
@@ -176,8 +176,8 @@
  <Reference Include="nunit.framework">
  <HintPath>C:/Users/max/Documents/team-uncertain/430ColorCube/Assets/UnityTestTools/UnitTesting/Editor/NUnit/Libs/nunit.framework.dll</HintPath>
  </Reference>
- <Reference Include="Mono.Cecil">
- <HintPath>C:/Users/max/Documents/team-uncertain/430ColorCube/Assets/UnityTestTools/UnitTesting/Editor/NUnit/Libs/Mono.Cecil.dll</HintPath>
+ <Reference Include="UnityEditor.Graphs">
+ <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
