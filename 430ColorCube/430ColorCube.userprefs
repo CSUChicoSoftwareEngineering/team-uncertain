@@ -1,8 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\UnityTestTools\UnitTesting\Editor\UnityUnitTest.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\colorCollision.cs">
     <Files>
-      <File FileName="Assets\UnityTestTools\UnitTesting\Editor\UnityUnitTest.cs" Line="5" Column="19" />
+      <File FileName="Assets\Scripts\colorCollision.cs" Line="92" Column="43" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
