@@ -14,7 +14,7 @@ public class movement : MonoBehaviour {
 	public Camera mainCam;
 
 	void Start(){
-		mainCam.camera.enabled = false;
+//		mainCam.camera.enabled = false;
 		playerCam.camera.enabled = true;
 	}
 
