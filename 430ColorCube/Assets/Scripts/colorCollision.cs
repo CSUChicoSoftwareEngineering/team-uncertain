@@ -10,14 +10,16 @@ public class colorCollision : MonoBehaviour {
 	public Material purpleMat;
 	public Material greenMat;
 	public Material orangeMat;
+	public Material yellowMat;
+	public Material redMat;
+	public Material blueMat;
+	public Material whiteMat;
 	public Mesh purp;	
 	public Mesh oran;
 	public Mesh gren;
 	Mesh initialMesh;
 	Mesh changeMesh;
-
-
-	public Color lerpedColor = Color.white;
+	
 
 	// Use this for initialization
 	void Start () {
@@ -31,24 +33,22 @@ public class colorCollision : MonoBehaviour {
 	void OnTriggerEnter(Collider collision) {
 		print("collide");
 		changeMesh = collision.GetComponent<MeshFilter>().mesh;
-		lerpedColor = gameObject.renderer.material.color;
 		if(collision.gameObject.tag == "Blue"){
-			if(lerpedColor == Color.red){
+			if(curColor == "red" && secColor == "clear"){
 				gameObject.renderer.material = purpleMat;
 				GetComponent<MeshFilter>().mesh = purp;
 				curColor = "blue";
 				secColor = "purple";
 			}
-			else if(lerpedColor == Color.yellow){
+			else if(curColor == "yellow" && secColor == "clear"){
 				gameObject.renderer.material = greenMat;
 				GetComponent<MeshFilter>().mesh = gren;
 				curColor = "blue";
 				secColor = "green";
 			}
 			else{
-				gameObject.renderer.material.color = Color.Lerp(lerpedColor, Color.blue, Time.time);
+				gameObject.renderer.material = blueMat;
 				GetComponent<MeshFilter>().mesh = changeMesh;
-				lerpedColor = gameObject.renderer.material.color;
 				curColor = "blue";
 				secColor = "clear";
 			}
@@ -57,22 +57,21 @@ public class colorCollision : MonoBehaviour {
 			collision.gameObject.GetComponent<spawner>().onPickup();
 		}
 		if(collision.gameObject.tag == "Red"){
-			if(lerpedColor == Color.blue){
+			if(curColor == "blue" && secColor == "clear"){
 				gameObject.renderer.material = purpleMat;
 				GetComponent<MeshFilter>().mesh = purp;
 				curColor = "blue"; //red
 				secColor = "purple";
 			}
-			else if(lerpedColor == Color.yellow){
+			else if(curColor == "yellow" && secColor == "clear"){
 				gameObject.renderer.material = orangeMat;
 				GetComponent<MeshFilter>().mesh = oran;
 				curColor = "red";
 				secColor = "orange";
 			}
 			else{
-				gameObject.renderer.material.color = Color.Lerp(lerpedColor, Color.red, Time.time);
+				gameObject.renderer.material = redMat;
 				GetComponent<MeshFilter>().mesh = changeMesh;
-				lerpedColor = gameObject.renderer.material.color;
 				curColor = "red";
 				secColor = "clear";
 			}
@@ -81,22 +80,21 @@ public class colorCollision : MonoBehaviour {
 			//Destroy(collision.gameObject);
 		}
 		if(collision.gameObject.tag == "Yellow"){
-			if(lerpedColor == Color.blue){
+			if(curColor == "blue" && secColor == "clear"){
 				gameObject.renderer.material = greenMat;
 				GetComponent<MeshFilter>().mesh = gren;
 				curColor = "yellow";
 				secColor = "green";
 			}
-			else if(lerpedColor == Color.red){
+			else if(curColor == "red" && secColor == "clear"){
 				gameObject.renderer.material = orangeMat;
 				GetComponent<MeshFilter>().mesh = oran;
 				curColor = "yellow";
 				secColor = "orange";
 			}
 			else{
-				gameObject.renderer.material.color = Color.Lerp(lerpedColor, Color.yellow, Time.time);
+				gameObject.renderer.material = yellowMat;
 				GetComponent<MeshFilter>().mesh = changeMesh;
-				lerpedColor = gameObject.renderer.material.color;
 				curColor = "yellow";
 				secColor = "clear";
 			}
@@ -104,11 +102,9 @@ public class colorCollision : MonoBehaviour {
 			collision.gameObject.GetComponent<spawner>().onPickup();
 		}
 		if(collision.gameObject.tag == "Black"){
-			while(lerpedColor != Color.white){
-				gameObject.renderer.material.color = Color.Lerp(lerpedColor, Color.white, Time.time);
-				GetComponent<MeshFilter>().mesh = initialMesh;
-				lerpedColor = gameObject.renderer.material.color;
-			}
+			gameObject.renderer.material = whiteMat;
+			GetComponent<MeshFilter>().mesh = initialMesh;
+
 			curColor = "clear";
 			secColor = "clear";
 		}
