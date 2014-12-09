@@ -11,10 +11,9 @@ public class movement : MonoBehaviour {
 	public float gravity = 40.0F;
 	private Vector3 moveDirection = Vector3.zero;
 	public Camera playerCam;
-	public Camera mainCam;
+
 
 	void Start(){
-//		mainCam.camera.enabled = false;
 		playerCam.camera.enabled = true;
 	}
 

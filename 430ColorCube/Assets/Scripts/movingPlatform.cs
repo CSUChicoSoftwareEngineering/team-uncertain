@@ -4,7 +4,7 @@ using System.Collections;
 public class movingPlatform : MonoBehaviour {
 	Vector3 startPosition;
 	Vector3 MoveDirection;
-	int MoveDistance = 32;
+	int MoveDistance = 33;
 	Vector3 endPosition;
 	public Collider ColliderPlatform;
 	bool OneWay;
@@ -14,6 +14,7 @@ public class movingPlatform : MonoBehaviour {
 
 	void Start () {
 		startPosition = transform.position;
+		gameObject.GetComponent<BoxCollider> ().size = new Vector3 (5.01f, 3, 4.3f);
 		MoveDirection = new Vector3 (1, 0, 0);
 		//MoveDirection is Vector3 - usually a norm vector like (0,1,0)
 		//which would cause the platform to move along the Y axis
