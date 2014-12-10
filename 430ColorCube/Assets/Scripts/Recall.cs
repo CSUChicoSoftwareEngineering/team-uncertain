@@ -12,6 +12,7 @@ public class Recall : MonoBehaviour {
 
 	void Start()
 	{
+		GameObject.Find("WinText").GetComponent<MeshRenderer>().enabled = false;
 
 		if(this.gameObject.tag == "Skybox")
 		{
@@ -35,16 +36,21 @@ public class Recall : MonoBehaviour {
 		{
 			if( this.gameObject.tag == "Skybox")
 			{
+				collision.transform.parent = null;
 				collision.transform.position = start_pos;
 			}
 
 			else if(this.gameObject.tag == "Winner")
 			{
-				collision.transform.position = start_pos;
+				GameObject.Find("WinText").GetComponent<MeshRenderer>().enabled = true;
+
+				StartCoroutine (WinDelay(5, collision));
 			}
+
 
 			collision.GetComponent<MeshFilter>().mesh = initial_mesh;
 			collision.GetComponent<MeshRenderer>().material.color = Color.Lerp (player.GetComponent<MeshRenderer>().material.color, init_color, Time.time);
+
 
 			GameObject[] destroyed = GameObject.FindGameObjectsWithTag("Destroyed");
 			foreach( GameObject cube in destroyed)
@@ -55,6 +61,15 @@ public class Recall : MonoBehaviour {
 			}
 		}
 	}
-	
+
+	IEnumerator WinDelay(float wait, Collider collision)
+	{
+		collision.GetComponent<movement> ().enabled = false;
+		yield return new WaitForSeconds(wait);
+		collision.GetComponent<movement> ().enabled = true;
+		collision.transform.parent = null;
+		collision.transform.position = start_pos;
+		GameObject.Find("WinText").GetComponent<MeshRenderer>().enabled = false;
+	}
 
 }
