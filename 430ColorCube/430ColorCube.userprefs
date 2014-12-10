@@ -1,12 +1,34 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\movement.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\test-results\Assembly-CSharp-Editor.csproj-Debug-2014-12-10.xml">
     <Files>
-      <File FileName="Assets\Scripts\movingPlatform.cs" Line="38" Column="4" />
-      <File FileName="Assets\Scripts\colorCollision.cs" Line="33" Column="43" />
-      <File FileName="Assets\Scripts\Recall.cs" Line="39" Column="39" />
-      <File FileName="Assets\Scripts\movement.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Recall.cs" Line="58" Column="65" />
+      <File FileName="Assets\Scripts\colorCollision.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\spawner.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\destroy.cs" Line="1" Column="1" />
+      <File FileName="Assets\test-results\Assembly-CSharp-Editor.csproj-Debug-2014-12-10.xml" Line="1" Column="1" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Assembly-CSharp" expanded="True">
+            <Node name="Scripts" expanded="True" />
+            <Node name="test-results" expanded="True">
+              <Node name="Assembly-CSharp-Editor.csproj-Debug-2014-12-10.xml" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+      <Pad Id="MonoDevelop.NUnit.TestPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

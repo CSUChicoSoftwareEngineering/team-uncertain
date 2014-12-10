@@ -1,3 +1,39 @@
-Base path: Q:/Editor/Data
-Pipe name: \\.\pipe\UnityShaderCompiler-1-4380
+Base path: D:/Editor/Data
+Pipe name: \\.\pipe\UnityShaderCompiler-1-4320
 Cmd: getPlatforms
+Cmd: compileSnippet
+  api=0 type=0 insize=4429 outsize=468 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_ON DIRLIGHTMAP_ON ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=4429 outsize=216 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_ON DIRLIGHTMAP_ON ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=4429 outsize=1640 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_ON DIRLIGHTMAP_ON ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=4429 outsize=345 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_ON DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=4429 outsize=4475 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF VERTEXLIGHT_ON ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=4429 outsize=1380 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=4429 outsize=492 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=8 type=0 insize=2380 outsize=4298 kw=POINT ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=2380 outsize=807 kw=DIRECTIONAL_COOKIE ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=2380 outsize=1680 kw=POINT ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=2380 outsize=1867 kw=POINT_COOKIE ok=1
+Cmd: compileSnippet
+  api=8 type=1 insize=2380 outsize=2227 kw=DIRECTIONAL_COOKIE ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=4121 outsize=566 kw=LIGHTMAP_ON DIRLIGHTMAP_ON HDR_LIGHT_PREPASS_OFF ok=1
+Cmd: compileSnippet
+  api=8 type=0 insize=4121 outsize=4437 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF HDR_LIGHT_PREPASS_ON ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=4121 outsize=369 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF HDR_LIGHT_PREPASS_OFF ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=4121 outsize=345 kw=LIGHTMAP_ON DIRLIGHTMAP_ON HDR_LIGHT_PREPASS_OFF ok=1
+Cmd: compileSnippet
+  api=8 type=1 insize=4121 outsize=1845 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF HDR_LIGHT_PREPASS_ON ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=4121 outsize=1445 kw=LIGHTMAP_ON DIRLIGHTMAP_ON HDR_LIGHT_PREPASS_ON ok=1

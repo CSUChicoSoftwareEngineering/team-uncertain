@@ -9,7 +9,7 @@ public class Recall : MonoBehaviour {
 
 	Mesh initial_mesh;
 	Color init_color;
-
+	Material init_mat;
 	void Start()
 	{
 		GameObject.Find("WinText").GetComponent<MeshRenderer>().enabled = false;
@@ -22,7 +22,7 @@ public class Recall : MonoBehaviour {
 
 			GameObject.Find ("Ceiling").GetComponent<BoxCollider>().size = new Vector3 (200, .5f, 90);
 		}
-
+		init_mat = player.renderer.material;
 		initial_mesh = player.GetComponent<MeshFilter> ().mesh;
 		init_color = player.GetComponent<MeshRenderer> ().material.color;
 
@@ -47,7 +47,7 @@ public class Recall : MonoBehaviour {
 				StartCoroutine (WinDelay(5, collision));
 			}
 
-
+			collision.renderer.material = init_mat;
 			collision.GetComponent<MeshFilter>().mesh = initial_mesh;
 			collision.GetComponent<MeshRenderer>().material.color = Color.Lerp (player.GetComponent<MeshRenderer>().material.color, init_color, Time.time);
 

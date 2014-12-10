@@ -108,4 +108,6 @@ public class colorCollision : MonoBehaviour {
 			secColor = "clear";
 		}
 	}
+
+
 }
