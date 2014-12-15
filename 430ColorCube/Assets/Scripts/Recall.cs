@@ -47,6 +47,13 @@ public class Recall : MonoBehaviour {
 				StartCoroutine (WinDelay(5, collision));
 			}
 
+			else if(this.gameObject.tag == "NextLevel")
+			{
+				GameObject.Find("WinText").GetComponent<MeshRenderer>().enabled = true;
+				
+				StartCoroutine (LvlDelay(5, collision));
+			}
+
 			collision.renderer.material = init_mat;
 			collision.GetComponent<MeshFilter>().mesh = initial_mesh;
 			collision.GetComponent<MeshRenderer>().material.color = Color.Lerp (player.GetComponent<MeshRenderer>().material.color, init_color, Time.time);
@@ -62,14 +69,22 @@ public class Recall : MonoBehaviour {
 		}
 	}
 
+	IEnumerator LvlDelay(float wait, Collider collision){
+		collision.GetComponent<movement> ().enabled = false;
+		yield return new WaitForSeconds(wait);
+		collision.GetComponent<movement> ().enabled = true;
+		Application.LoadLevel (1);
+	}
+
 	IEnumerator WinDelay(float wait, Collider collision)
 	{
 		collision.GetComponent<movement> ().enabled = false;
 		yield return new WaitForSeconds(wait);
 		collision.GetComponent<movement> ().enabled = true;
-		collision.transform.parent = null;
-		collision.transform.position = start_pos;
-		GameObject.Find("WinText").GetComponent<MeshRenderer>().enabled = false;
+		Application.LoadLevel (0);
+		//collision.transform.parent = null;
+		//collision.transform.position = start_pos;
+		//GameObject.Find("WinText").GetComponent<MeshRenderer>().enabled = false;
 	}
 
 }

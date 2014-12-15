@@ -5,6 +5,7 @@ public class movement : MonoBehaviour {
 	public GameObject player;
 	int chargeTime = 0;
 	public bool smash = false;
+	public bool smash2 = false;
 	bool charge = true;
 	int jumpSpeed = 15;
 	int playerSpeed = 10;
@@ -76,7 +77,7 @@ public class movement : MonoBehaviour {
 		}
 		if (controller.isGrounded == false) {
 			if(Input.GetButton("Charge") && player.GetComponent<colorCollision>().secColor == "orange"){
-				smash = true;
+				smash2 = true;
 				float curSpeed = playerSpeed * Input.GetAxis("Vertical");
 				gravity = 240f;
 			}
@@ -85,7 +86,8 @@ public class movement : MonoBehaviour {
 
 
 		if (player.GetComponent<colorCollision>().curColor == "blue" && controller.isGrounded == false 
-		    || player.GetComponent<colorCollision> ().secColor == "purple" && controller.isGrounded == false){
+		    || player.GetComponent<colorCollision> ().secColor == "purple" && controller.isGrounded == false 
+		    || player.GetComponent<colorCollision>().secColor == "green"){
 			if(Input.GetButton("Jump") && moveDirection.y < 1f){
 				gravity = 30f;
 				moveDirection = new Vector3(0, 0, Input.GetAxis("Vertical"));
